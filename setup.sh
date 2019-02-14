@@ -26,7 +26,23 @@ pip install wheel
 pip install cookiecutter
 pip install flask
 pip install gunicorn
+pip install cookiecutter
+cookiecutter https://github.com/drivendata/cookiecutter-data-science
 cat > ~/.bash_aliases <<EOF /
-alias1='sudo nano ~/.bash_aliases' /
-alias2='sudo source ~/.bashrc' /
+alias alias1='nano ~/.bash_aliases' /
+alias alias2='source ~/.bashrc' /
+alias project='cd ~/project && source venv/bin/activate
 EOF
+cd ~/project
+git init
+git config --global user.email ""
+git config --global user.name ""
+echo "# project" >> README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/MR1991/binance.git
+git push -u origin master
+
+
+
+
